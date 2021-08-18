@@ -40,7 +40,7 @@ describe('abc', ()=>{
 
     })
 
-    it('The log in page work', ()=>{
+    it.only('The log in page work', ()=>{
         cy.viewport(1280,720)
         cy.visit('https://codedamn.com/')
         cy.contains('Sign In').click()
