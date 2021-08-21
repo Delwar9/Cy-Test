@@ -1,12 +1,24 @@
 /// <reference types = "cypress"/>
 
+const token =''
+
 describe('abc', ()=>{
+
+    // before hook is used for repetitive test, that will open up your page before all of your tests
+    before(()=>{
+        cy.then(()=>{
+            window.localStorage.setItem('__auth__token',token)
+        })
+    })
+
 
     //write the viewport & website once and run for every single test
     //bootstrapping external things
+    //brforeEach runs before starting the execution of each of the tests specified using “it” or “specify” in the “describe” or “context” block.
     beforeEach(()=>{
         cy.viewport(1280,720)
         cy.visit('https://codedamn.com/')
+        
     })
     
    // it('The webpage loads at least',()=>{
