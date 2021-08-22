@@ -1,6 +1,6 @@
 /// <reference types = "cypress"/>
 
-const token ='abcd....'
+const token =''
 
 describe('abc', ()=>{
 
